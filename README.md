@@ -25,6 +25,8 @@ This project is a simple test automation framework using **Selenium WebDriver**,
 - Java 17+ installed
 - Maven installed and added to PATH
 - Chrome browser installed
+- Selenium jars should be added to the project
+- TestNG should be installed
 - Internet access for WebDriverManager to download drivers
 
 ---
@@ -44,8 +46,7 @@ This project is a simple test automation framework using **Selenium WebDriver**,
 1: Clone repository
 
     bash command: 
-    git clone https://github.com/your-username/your-repo-name.git
-    cd your-repo-name
+    git clone https://github.com/pkjsrk/entrataAssessment.git
 
 2: Install Dependencies
 
