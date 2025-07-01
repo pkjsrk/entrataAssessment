@@ -9,12 +9,12 @@ This project is a simple test automation framework using **Selenium WebDriver**,
 
 ## Project Structure
 
-├── src
-│ ├── hooks # Base test setup (WebDriver init, teardown)
-│ ├── pages # Page Object Model classes (homePage, watchDemoPage)
-│ └── tests # Test classes (demoFormTest)
-├── pom.xml # Maven dependencies
-└── README.md # Project documentation
+- src:
+    - hooks # Base test setup (WebDriver init, teardown)
+    - pages # Page Object Model classes (homePage, watchDemoPage)
+    - tests # Test classes (demoFormTest)
+- pom.xml # Maven dependencies
+- README.md # Project documentation
 
 
 
