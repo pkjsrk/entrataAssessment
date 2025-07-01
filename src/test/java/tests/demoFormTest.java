@@ -59,9 +59,10 @@ public class demoFormTest extends baseTest {
 	@Test(dependsOnMethods = "verifyNaviagationToWatchDemoPage")
 	public void verifyTooltipIsDisplayedForInvalidPhone() throws IOException {
 		
-		String invalidPhone = "abs";
-		String lastname = "Brown";
+		String invalidPhone = configReader.getProperty("invalidPhone");
+		String lastname = configReader.getProperty("lastname");
 		String expectedTooltipMsg = configReader.getProperty("invalidTooltipMsgForEmail");
+		
 
 		demoObj.clickPhoneField();
 		demoObj.enterPhone(invalidPhone);

@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-02T00:48:39 IST" name="Default suite" finished-at="2025-07-02T00:48:59 IST" duration-ms="20857">
+  <suite started-at="2025-07-02T01:18:01 IST" name="Default suite" finished-at="2025-07-02T01:18:29 IST" duration-ms="28175">
     <groups>
     </groups>
-    <test started-at="2025-07-02T00:48:39 IST" name="Default test" finished-at="2025-07-02T00:48:59 IST" duration-ms="20857">
+    <test started-at="2025-07-02T01:18:01 IST" name="Default test" finished-at="2025-07-02T01:18:29 IST" duration-ms="28175">
       <class name="tests.demoFormTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T00:48:39 IST" name="setup" finished-at="2025-07-02T00:48:42 IST" duration-ms="3055" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T01:18:01 IST" name="setup" finished-at="2025-07-02T01:18:08 IST" duration-ms="6760" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyHomePageTitle()[pri:1, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T00:48:42 IST" name="verifyHomePageTitle" finished-at="2025-07-02T00:48:54 IST" duration-ms="12182" status="PASS">
+        <test-method signature="verifyHomePageTitle()[pri:1, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T01:18:08 IST" name="verifyHomePageTitle" finished-at="2025-07-02T01:18:23 IST" duration-ms="15400" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomePageTitle -->
-        <test-method signature="verifyNaviagationToWatchDemoPage()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T00:48:54 IST" name="verifyNaviagationToWatchDemoPage" finished-at="2025-07-02T00:48:58 IST" depends-on-methods="tests.demoFormTest.verifyHomePageTitle" duration-ms="4197" status="PASS">
+        <test-method signature="verifyNaviagationToWatchDemoPage()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T01:18:23 IST" name="verifyNaviagationToWatchDemoPage" finished-at="2025-07-02T01:18:28 IST" depends-on-methods="tests.demoFormTest.verifyHomePageTitle" duration-ms="4366" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNaviagationToWatchDemoPage -->
-        <test-method signature="verifyTooltipIsDisplayedForInvalidPhone()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T00:48:58 IST" name="verifyTooltipIsDisplayedForInvalidPhone" finished-at="2025-07-02T00:48:59 IST" depends-on-methods="tests.demoFormTest.verifyNaviagationToWatchDemoPage" duration-ms="575" status="PASS">
+        <test-method signature="verifyTooltipIsDisplayedForInvalidPhone()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T01:18:28 IST" name="verifyTooltipIsDisplayedForInvalidPhone" finished-at="2025-07-02T01:18:28 IST" depends-on-methods="tests.demoFormTest.verifyNaviagationToWatchDemoPage" duration-ms="702" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTooltipIsDisplayedForInvalidPhone -->
-        <test-method signature="verifyDropdownOptionSelectionInDropdown()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T00:48:59 IST" name="verifyDropdownOptionSelectionInDropdown" finished-at="2025-07-02T00:48:59 IST" depends-on-methods="tests.demoFormTest.verifyTooltipIsDisplayedForInvalidPhone" duration-ms="228" status="PASS">
+        <test-method signature="verifyDropdownOptionSelectionInDropdown()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T01:18:28 IST" name="verifyDropdownOptionSelectionInDropdown" finished-at="2025-07-02T01:18:29 IST" depends-on-methods="tests.demoFormTest.verifyTooltipIsDisplayedForInvalidPhone" duration-ms="233" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDropdownOptionSelectionInDropdown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T00:48:59 IST" name="tearDown" finished-at="2025-07-02T00:48:59 IST" duration-ms="547" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T01:18:29 IST" name="tearDown" finished-at="2025-07-02T01:18:29 IST" duration-ms="620" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

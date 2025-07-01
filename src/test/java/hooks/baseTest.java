@@ -12,7 +12,7 @@ public class baseTest {
 	
 	public WebDriver driver; 
 	
-	
+	//setting up chromedriver using webDriverManager
 	@BeforeClass
 	public void setup() {
 		
@@ -22,6 +22,9 @@ public class baseTest {
 		driver.manage().window().maximize();
 	}
 	
+	
+	
+	//Teardown method to quit the session
 	@AfterClass
 	public void tearDown() {
 		if(driver!=null) {
