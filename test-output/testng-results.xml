@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-01T20:31:47 IST" name="Default suite" finished-at="2025-07-01T20:32:31 IST" duration-ms="43707">
+  <suite started-at="2025-07-02T00:48:39 IST" name="Default suite" finished-at="2025-07-02T00:48:59 IST" duration-ms="20857">
     <groups>
     </groups>
-    <test started-at="2025-07-01T20:31:47 IST" name="Default test" finished-at="2025-07-01T20:32:31 IST" duration-ms="43707">
+    <test started-at="2025-07-02T00:48:39 IST" name="Default test" finished-at="2025-07-02T00:48:59 IST" duration-ms="20857">
       <class name="tests.demoFormTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.demoFormTest@3fc2959f]" started-at="2025-07-01T20:31:47 IST" name="setup" finished-at="2025-07-01T20:31:51 IST" duration-ms="3308" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T00:48:39 IST" name="setup" finished-at="2025-07-02T00:48:42 IST" duration-ms="3055" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyHomePageTitle()[pri:1, instance:tests.demoFormTest@3fc2959f]" started-at="2025-07-01T20:31:51 IST" name="verifyHomePageTitle" finished-at="2025-07-01T20:32:15 IST" duration-ms="24289" status="PASS">
+        <test-method signature="verifyHomePageTitle()[pri:1, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T00:48:42 IST" name="verifyHomePageTitle" finished-at="2025-07-02T00:48:54 IST" duration-ms="12182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomePageTitle -->
-        <test-method signature="navigationToWatchDemoPage()[pri:0, instance:tests.demoFormTest@3fc2959f]" started-at="2025-07-01T20:32:15 IST" name="navigationToWatchDemoPage" finished-at="2025-07-01T20:32:30 IST" depends-on-methods="tests.demoFormTest.verifyHomePageTitle" duration-ms="14386" status="PASS">
+        <test-method signature="verifyNaviagationToWatchDemoPage()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T00:48:54 IST" name="verifyNaviagationToWatchDemoPage" finished-at="2025-07-02T00:48:58 IST" depends-on-methods="tests.demoFormTest.verifyHomePageTitle" duration-ms="4197" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navigationToWatchDemoPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.demoFormTest@3fc2959f]" started-at="2025-07-01T20:32:30 IST" name="tearDown" finished-at="2025-07-01T20:32:31 IST" duration-ms="1599" status="PASS">
+        </test-method> <!-- verifyNaviagationToWatchDemoPage -->
+        <test-method signature="verifyTooltipIsDisplayedForInvalidPhone()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T00:48:58 IST" name="verifyTooltipIsDisplayedForInvalidPhone" finished-at="2025-07-02T00:48:59 IST" depends-on-methods="tests.demoFormTest.verifyNaviagationToWatchDemoPage" duration-ms="575" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTooltipIsDisplayedForInvalidPhone -->
+        <test-method signature="verifyDropdownOptionSelectionInDropdown()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T00:48:59 IST" name="verifyDropdownOptionSelectionInDropdown" finished-at="2025-07-02T00:48:59 IST" depends-on-methods="tests.demoFormTest.verifyTooltipIsDisplayedForInvalidPhone" duration-ms="228" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDropdownOptionSelectionInDropdown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T00:48:59 IST" name="tearDown" finished-at="2025-07-02T00:48:59 IST" duration-ms="547" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

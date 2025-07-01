@@ -5,9 +5,11 @@
     <classes>
       <class name="tests.demoFormTest">
         <methods>
-          <include name="navigationToWatchDemoPage"/>
+          <include name="verifyNaviagationToWatchDemoPage"/>
+          <include name="verifyOptionSelectionInDropdown"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="verifyTooltipIsDisplayedForInvalidPhone"/>
           <include name="verifyHomePageTitle"/>
         </methods>
       </class> <!-- tests.demoFormTest -->

@@ -1,24 +1,26 @@
 package tests;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
-import java.util.*;
 
 import org.testng.annotations.Test;
 
 import hooks.baseTest;
 import pages.homePage;
+import pages.watchDemoPage;
 import utility.configReader;
 
 public class demoFormTest extends baseTest {
 	
 	
-	homePage homeObj;
+	homePage homeObj = new homePage(driver);
+	watchDemoPage demoObj  = new watchDemoPage(driver);
 	
 	
 	
-	//Below testcase is to verify Homepage title
+	//Below test is to verify Homepage title
 	
 	@Test(priority=1)
 	public void verifyHomePageTitle() throws IOException {
@@ -34,24 +36,61 @@ public class demoFormTest extends baseTest {
 	}
 	
 	
-	//Below testcase depends on 1st method and is for navigation to Watch demo page
+	//Below test depends on 1st method and is for navigation to Watch demo page
+	
 	@Test(dependsOnMethods = "verifyHomePageTitle")
-	public void navigationToWatchDemoPage() {
+	public void verifyNaviagationToWatchDemoPage() {
 		
 		homeObj = new homePage(driver);
+		demoObj = new watchDemoPage(driver);
 		
-		homeObj.clickWatchDemoButton();
+		
+		homeObj.clickWatchDemoButton();		
+	
+		boolean logoVisibility = demoObj.verifyLogo();
+		
+		assertTrue(logoVisibility, "Verification: failed to display entrata logo.");
+		
+				
+	}
+	
+	//Below test is to validate the error popup, when we enter wrong phone number
+	
+	@Test(dependsOnMethods = "verifyNaviagationToWatchDemoPage")
+	public void verifyTooltipIsDisplayedForInvalidPhone() throws IOException {
+		
+		String invalidPhone = "abs";
+		String lastname = "Brown";
+		String expectedTooltipMsg = configReader.getProperty("invalidTooltipMsgForEmail");
+
+		demoObj.clickPhoneField();
+		demoObj.enterPhone(invalidPhone);
+		demoObj.enterLastName(lastname);
+		demoObj.clickPhoneField();
 		
 		
-		Set<String> windowHandle = driver.getWindowHandles();
+		String actualTooltip = demoObj.verifyPhoneTooltip();
 		
-		for(String handle : windowHandle) {
-			
-			driver.switchTo().window(handle);
+		if(expectedTooltipMsg.contains(actualTooltip)) {
+			assertTrue(true,expectedTooltipMsg+" is not displayed");
 		}
 		
+	}
+	
+	
+	//Below test is to verify correct toolTip is selected from dropdown
+	
+	@Test(dependsOnMethods = "verifyTooltipIsDisplayedForInvalidPhone")
+	public void verifyDropdownOptionSelectionInDropdown() throws IOException {
 		
+		String expectedDropdownOption = configReader.getProperty("dropdownOptionToSelect");
 		
+		String actualDropdownOption = demoObj.verifyUnitsSelection(expectedDropdownOption);
+		
+		if(expectedDropdownOption.contains(actualDropdownOption)) {
+			assertTrue(true,expectedDropdownOption+" is not displayed");
+		}
+				
 	}
 
 }

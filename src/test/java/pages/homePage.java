@@ -14,7 +14,7 @@ public class homePage {
 	WebDriver driver;
 	WebDriverWait wait;
 	
-	
+	//constructor for initilizing object
 	public homePage(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
@@ -22,11 +22,13 @@ public class homePage {
 
 	}
 	
+	//Below are the locators specific to page.
 	
 	@FindBy(xpath = "//div[@class='nav_buttons']//a[contains(normalize-space(text()),'Watch demo')]")
 	WebElement watchDemoButton;
 	
 	
+	//Below are the action methods
 	public void clickWatchDemoButton() {
 		wait.until(ExpectedConditions.visibilityOf(watchDemoButton)).click();
 	}
