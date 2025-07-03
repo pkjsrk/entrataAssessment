@@ -1,0 +1,17 @@
+2025-07-04 01:11:42 [main] INFO  hooks.baseTest - Extent report setup complete
+2025-07-04 01:11:45 [main] INFO  hooks.baseTest - WebDriver initialized for test class
+2025-07-04 01:11:45 [main] INFO  hooks.baseTest - Started test: VerifyHomePageTitle
+2025-07-04 01:11:57 [main] INFO  hooks.baseTest - Navigated to: https://www.entrata.com/
+2025-07-04 01:11:57 [main] INFO  hooks.baseTest - Actual page title: Property Management Software | Entrata®
+2025-07-04 01:11:57 [main] INFO  hooks.baseTest - Started test: VerifySolutionsOptions
+2025-07-04 01:11:58 [main] INFO  hooks.baseTest - Available solution options: [Multifamily, Military, Student, Commercial, Affordable, Manufactured Housing]
+2025-07-04 01:11:58 [main] INFO  hooks.baseTest - Verified option is present: Military
+2025-07-04 01:11:58 [main] INFO  hooks.baseTest - Started test: VerifyNavigationToWatchDemoPage
+2025-07-04 01:12:03 [main] INFO  hooks.baseTest - Clicked on Watch Demo button
+2025-07-04 01:12:03 [main] INFO  hooks.baseTest - Started test: VerifyTooltipIsDisplayedForInvalidPhone
+2025-07-04 01:12:03 [main] INFO  hooks.baseTest - Tooltip message shown: Must be a phone number.
+503-555-1212
+2025-07-04 01:12:04 [main] INFO  hooks.baseTest - Started test: VerifyDropdownOptionSelectionInDropdown
+2025-07-04 01:12:04 [main] INFO  hooks.baseTest - Dropdown selection: Expected: 301 - 2000, Actual: 301 - 2000
+2025-07-04 01:12:05 [main] INFO  hooks.baseTest - WebDriver session quit after test class
+2025-07-04 01:12:05 [main] INFO  hooks.baseTest - Extent report flushed

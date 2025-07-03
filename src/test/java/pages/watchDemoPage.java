@@ -3,6 +3,7 @@ package pages;
 import java.time.Duration;
 import java.util.Set;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -47,6 +48,9 @@ public class watchDemoPage {
 	@FindBy(xpath = "//select[@id='Unit_Count__c']")
 	WebElement dropdown;
 	
+	@FindBy(xpath = "//option[@value='301 - 2000']")
+	WebElement dropdownOptionToSelect;
+	
 	
 	
 	
@@ -81,8 +85,8 @@ public class watchDemoPage {
 		wait.until(ExpectedConditions.visibilityOf(phoneField)).click();
 	}
 	
-	
 	public String verifyPhoneTooltip() {
+		
 		return wait.until(ExpectedConditions.visibilityOf(phoneToolTip)).getText();
 	}
 
@@ -91,7 +95,7 @@ public class watchDemoPage {
 		Select opt = new Select(dropdown);
 		opt.selectByVisibleText(option);
 		
-		return wait.until(ExpectedConditions.visibilityOf(dropdown)).getText();
+		return wait.until(ExpectedConditions.visibilityOf(dropdownOptionToSelect)).getText();
 		
 	}
 }

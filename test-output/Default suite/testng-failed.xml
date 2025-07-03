@@ -5,12 +5,13 @@
     <classes>
       <class name="tests.demoFormTest">
         <methods>
-          <include name="verifyNaviagationToWatchDemoPage"/>
-          <include name="verifyOptionSelectionInDropdown"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="verifyTooltipIsDisplayedForInvalidPhone"/>
-          <include name="verifyHomePageTitle"/>
+          <include name="logTestResult"/>
+          <include name="startTest"/>
+          <include name="setupReport"/>
+          <include name="setupBrowser"/>
+          <include name="tearDownBrowser"/>
+          <include name="flushReport"/>
+          <include name="VerifyTooltipIsDisplayedForInvalidPhone"/>
         </methods>
       </class> <!-- tests.demoFormTest -->
     </classes>

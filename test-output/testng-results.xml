@@ -1,36 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-02T01:18:01 IST" name="Default suite" finished-at="2025-07-02T01:18:29 IST" duration-ms="28175">
+  <suite started-at="2025-07-04T01:11:42 IST" name="Default suite" finished-at="2025-07-04T01:12:05 IST" duration-ms="22147">
     <groups>
     </groups>
-    <test started-at="2025-07-02T01:18:01 IST" name="Default test" finished-at="2025-07-02T01:18:29 IST" duration-ms="28175">
+    <test started-at="2025-07-04T01:11:42 IST" name="Default test" finished-at="2025-07-04T01:12:05 IST" duration-ms="22147">
       <class name="tests.demoFormTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T01:18:01 IST" name="setup" finished-at="2025-07-02T01:18:08 IST" duration-ms="6760" status="PASS">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:11:41 IST" name="setupReport" finished-at="2025-07-04T01:11:42 IST" duration-ms="939" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyHomePageTitle()[pri:1, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T01:18:08 IST" name="verifyHomePageTitle" finished-at="2025-07-02T01:18:23 IST" duration-ms="15400" status="PASS">
+        </test-method> <!-- setupReport -->
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:11:42 IST" name="setupBrowser" finished-at="2025-07-04T01:11:45 IST" duration-ms="2833" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHomePageTitle -->
-        <test-method signature="verifyNaviagationToWatchDemoPage()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T01:18:23 IST" name="verifyNaviagationToWatchDemoPage" finished-at="2025-07-02T01:18:28 IST" depends-on-methods="tests.demoFormTest.verifyHomePageTitle" duration-ms="4366" status="PASS">
+        </test-method> <!-- setupBrowser -->
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:11:45 IST" name="startTest" finished-at="2025-07-04T01:11:45 IST" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.demoFormTest.VerifyHomePageTitle() throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyNaviagationToWatchDemoPage -->
-        <test-method signature="verifyTooltipIsDisplayedForInvalidPhone()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T01:18:28 IST" name="verifyTooltipIsDisplayedForInvalidPhone" finished-at="2025-07-02T01:18:28 IST" depends-on-methods="tests.demoFormTest.verifyNaviagationToWatchDemoPage" duration-ms="702" status="PASS">
+        </test-method> <!-- startTest -->
+        <test-method signature="VerifyHomePageTitle()[pri:1, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:11:45 IST" name="VerifyHomePageTitle" finished-at="2025-07-04T01:11:57 IST" duration-ms="11814" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTooltipIsDisplayedForInvalidPhone -->
-        <test-method signature="verifyDropdownOptionSelectionInDropdown()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T01:18:28 IST" name="verifyDropdownOptionSelectionInDropdown" finished-at="2025-07-02T01:18:29 IST" depends-on-methods="tests.demoFormTest.verifyTooltipIsDisplayedForInvalidPhone" duration-ms="233" status="PASS">
+        </test-method> <!-- VerifyHomePageTitle -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:11:57 IST" name="logTestResult" finished-at="2025-07-04T01:11:57 IST" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyHomePageTitle status=SUCCESS method=demoFormTest.VerifyHomePageTitle()[pri:1, instance:tests.demoFormTest@1a677343] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyDropdownOptionSelectionInDropdown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.demoFormTest@1018bde2]" started-at="2025-07-02T01:18:29 IST" name="tearDown" finished-at="2025-07-02T01:18:29 IST" duration-ms="620" status="PASS">
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:11:57 IST" name="startTest" finished-at="2025-07-04T01:11:57 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.demoFormTest.VerifySolutionsOptions() throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
+        </test-method> <!-- startTest -->
+        <test-method signature="VerifySolutionsOptions()[pri:2, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:11:57 IST" name="VerifySolutionsOptions" finished-at="2025-07-04T01:11:58 IST" duration-ms="1301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifySolutionsOptions -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:11:58 IST" name="logTestResult" finished-at="2025-07-04T01:11:58 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifySolutionsOptions status=SUCCESS method=demoFormTest.VerifySolutionsOptions()[pri:2, instance:tests.demoFormTest@1a677343] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:11:58 IST" name="startTest" finished-at="2025-07-04T01:11:58 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.demoFormTest.VerifyNavigationToWatchDemoPage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method signature="VerifyNavigationToWatchDemoPage()[pri:3, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:11:58 IST" name="VerifyNavigationToWatchDemoPage" finished-at="2025-07-04T01:12:03 IST" duration-ms="4227" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyNavigationToWatchDemoPage -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:12:03 IST" name="logTestResult" finished-at="2025-07-04T01:12:03 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyNavigationToWatchDemoPage status=SUCCESS method=demoFormTest.VerifyNavigationToWatchDemoPage()[pri:3, instance:tests.demoFormTest@1a677343] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:12:03 IST" name="startTest" finished-at="2025-07-04T01:12:03 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.demoFormTest.VerifyTooltipIsDisplayedForInvalidPhone() throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method signature="VerifyTooltipIsDisplayedForInvalidPhone()[pri:4, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:12:03 IST" name="VerifyTooltipIsDisplayedForInvalidPhone" finished-at="2025-07-04T01:12:03 IST" duration-ms="601" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected tooltip message not displayed. Expected: [Must be a phone number. ], Got: [Must be a phone number.
+503-555-1212] expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected tooltip message not displayed. Expected: [Must be a phone number. ], Got: [Must be a phone number.
+503-555-1212] expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at tests.demoFormTest.VerifyTooltipIsDisplayedForInvalidPhone(demoFormTest.java:82)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyTooltipIsDisplayedForInvalidPhone -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:12:03 IST" name="logTestResult" finished-at="2025-07-04T01:12:04 IST" duration-ms="504" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyTooltipIsDisplayedForInvalidPhone status=FAILURE method=demoFormTest.VerifyTooltipIsDisplayedForInvalidPhone()[pri:4, instance:tests.demoFormTest@1a677343] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method signature="VerifyDropdownOptionSelectionInDropdown()[pri:5, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:12:04 IST" name="VerifyDropdownOptionSelectionInDropdown" finished-at="2025-07-04T01:12:04 IST" duration-ms="237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyDropdownOptionSelectionInDropdown -->
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:12:04 IST" name="startTest" finished-at="2025-07-04T01:12:04 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.demoFormTest.VerifyDropdownOptionSelectionInDropdown() throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method is-config="true" signature="logTestResult(org.testng.ITestResult)[pri:0, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:12:04 IST" name="logTestResult" finished-at="2025-07-04T01:12:04 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyDropdownOptionSelectionInDropdown status=SUCCESS method=demoFormTest.VerifyDropdownOptionSelectionInDropdown()[pri:5, instance:tests.demoFormTest@1a677343] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestResult -->
+        <test-method is-config="true" signature="tearDownBrowser()[pri:0, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:12:04 IST" name="tearDownBrowser" finished-at="2025-07-04T01:12:05 IST" duration-ms="515" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownBrowser -->
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:tests.demoFormTest@1a677343]" started-at="2025-07-04T01:12:05 IST" name="flushReport" finished-at="2025-07-04T01:12:05 IST" duration-ms="440" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReport -->
       </class> <!-- tests.demoFormTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.testng.annotations.Test;
 
@@ -13,85 +14,84 @@ import pages.watchDemoPage;
 import utility.configReader;
 
 public class demoFormTest extends baseTest {
-	
-	
-	homePage homeObj = new homePage(driver);
-	watchDemoPage demoObj  = new watchDemoPage(driver);
-	
-	
-	
-	//Below test is to verify Homepage title
-	
-	@Test(priority=1)
-	public void verifyHomePageTitle() throws IOException {
-		
-		String siteUrl = configReader.getProperty("URL");
-		String expectedPageTitle = configReader.getProperty("pageTitle");
-				
-		driver.get(siteUrl);
-		String actualPageTitle = driver.getTitle();
-		
-		assertEquals(actualPageTitle, expectedPageTitle);
-				
-	}
-	
-	
-	//Below test depends on 1st method and is for navigation to Watch demo page
-	
-	@Test(dependsOnMethods = "verifyHomePageTitle")
-	public void verifyNaviagationToWatchDemoPage() {
-		
-		homeObj = new homePage(driver);
-		demoObj = new watchDemoPage(driver);
-		
-		
-		homeObj.clickWatchDemoButton();		
-	
-		boolean logoVisibility = demoObj.verifyLogo();
-		
-		assertTrue(logoVisibility, "Verification: failed to display entrata logo.");
-		
-				
-	}
-	
-	//Below test is to validate the error popup, when we enter wrong phone number
-	
-	@Test(dependsOnMethods = "verifyNaviagationToWatchDemoPage")
-	public void verifyTooltipIsDisplayedForInvalidPhone() throws IOException {
-		
-		String invalidPhone = configReader.getProperty("invalidPhone");
-		String lastname = configReader.getProperty("lastname");
-		String expectedTooltipMsg = configReader.getProperty("invalidTooltipMsgForEmail");
-		
 
-		demoObj.clickPhoneField();
-		demoObj.enterPhone(invalidPhone);
-		demoObj.enterLastName(lastname);
-		demoObj.clickPhoneField();
-		
-		
-		String actualTooltip = demoObj.verifyPhoneTooltip();
-		
-		if(expectedTooltipMsg.contains(actualTooltip)) {
-			assertTrue(true,expectedTooltipMsg+" is not displayed");
-		}
-		
-	}
-	
-	
-	//Below test is to verify correct toolTip is selected from dropdown
-	
-	@Test(dependsOnMethods = "verifyTooltipIsDisplayedForInvalidPhone")
-	public void verifyDropdownOptionSelectionInDropdown() throws IOException {
-		
-		String expectedDropdownOption = configReader.getProperty("dropdownOptionToSelect");
-		
-		String actualDropdownOption = demoObj.verifyUnitsSelection(expectedDropdownOption);
-		
-		if(expectedDropdownOption.contains(actualDropdownOption)) {
-			assertTrue(true,expectedDropdownOption+" is not displayed");
-		}
-				
-	}
+    private homePage homeObj;
+    private watchDemoPage demoObj;
 
+    @Test(priority = 1)
+    public void VerifyHomePageTitle() throws IOException {
+        String siteUrl = configReader.getProperty("URL");
+        String expectedTitle = configReader.getProperty("pageTitle");
+
+        driver.get(siteUrl);
+        log.info("Navigated to: " + siteUrl);
+
+        String actualTitle = driver.getTitle();
+        log.info("Actual page title: " + actualTitle);
+
+        assertEquals(actualTitle, expectedTitle, "Page title mismatch!");
+    }
+    
+    
+    @Test(priority = 2)
+    public void VerifySolutionsOptions() throws IOException {
+    	homeObj = new homePage(driver);
+    	 
+        String optionToVerify = configReader.getProperty("solutionOptionToVerify");
+
+        homeObj.hoverOverSolutionsMenu();
+        
+        List<String> solutionsOptions = homeObj.fetchSolutionsMenuOption();
+
+        log.info("Available solution options: " + solutionsOptions);
+
+        boolean isOptionPresent = solutionsOptions.contains(optionToVerify);
+
+        assertTrue(isOptionPresent, optionToVerify + " is not available in the Solutions menu.");
+        
+        log.info("Verified option is present: " + optionToVerify);
+    }
+
+    @Test(priority = 3)
+    public void VerifyNavigationToWatchDemoPage() {
+        homeObj = new homePage(driver);
+        demoObj = new watchDemoPage(driver);
+
+        homeObj.clickWatchDemoButton();
+        log.info("Clicked on Watch Demo button");
+
+        boolean logoDisplayed = demoObj.verifyLogo();
+        assertTrue(logoDisplayed, "Entrata logo not displayed on Watch Demo page");
+    }
+
+    @Test(priority = 4)
+    public void VerifyTooltipIsDisplayedForInvalidPhone() throws IOException {
+        demoObj = new watchDemoPage(driver);
+
+        String invalidPhone = configReader.getProperty("invalidPhone");
+        String lastname = configReader.getProperty("lastname");
+        String expectedTooltip = configReader.getProperty("invalidTooltipMsgForEmail");
+
+        demoObj.enterPhone(invalidPhone);
+        demoObj.enterLastName(lastname);
+        demoObj.clickPhoneField();
+
+        String actualTooltip = demoObj.verifyPhoneTooltip();
+        log.info("Tooltip message shown: " + actualTooltip);
+
+        assertTrue(actualTooltip.contains(expectedTooltip),
+            "Expected tooltip message not displayed. Expected: [" + expectedTooltip + "], Got: [" + actualTooltip + "]");
+    }
+
+    @Test(priority = 5)
+    public void VerifyDropdownOptionSelectionInDropdown() throws IOException {
+        demoObj = new watchDemoPage(driver);
+
+        String expectedOption = configReader.getProperty("dropdownOptionToSelect");
+
+        String actualOption = demoObj.verifyUnitsSelection(expectedOption);
+        log.info("Dropdown selection: Expected: " + expectedOption + ", Actual: " + actualOption);
+
+        assertEquals(actualOption, expectedOption, "Dropdown selection mismatch.");
+    }
 }
